@@ -3,21 +3,29 @@ import styled from 'styled-components';
 import { Avatar } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 
 function Header() {
   return (
     <HeaderContainer>
+
       <HeaderLeft>
         <HeaderAvatar
 
         />
         <AccessTimeIcon />
       </HeaderLeft>
+
       <HeaderSearch>
         <SearchIcon />
         <input placeholder="Search" />
       </HeaderSearch>
+
+      <HeaderRight>
+        <HelpOutlineIcon />
+      </HeaderRight>
+
     </HeaderContainer>
   );
 }
@@ -64,6 +72,17 @@ const HeaderSearch = styled.div`
     min-width: 30vw;
     outline: none;
     color: #fff;
+  }
+`;
+
+const HeaderRight = styled.div`
+  display: flex;
+  flex: 0.3;
+  align-items: flex-end;
+
+  > .MuiSvgIcon-root {
+    margin-left: auto;
+    margin-right: 20px;
   }
 `;
 
